@@ -2,8 +2,8 @@
 
 ### Integrantes:
 
-* Tomás Lagos
+* Tomás Lagos  
 N° de Alumno: 
 
-* Mario Zegers
+* Mario Zegers  
 N° de Alumno: 18638821
