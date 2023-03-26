@@ -27,3 +27,34 @@ class AdditionCounter(Visitor):
 
     def total(self):
         return self.counter
+
+# Visitador que cuenta la cantidad de nodos de tipo ModuloNode que existen en el arbol
+class ModuloOperatorCounter(Visitor):
+    def __init__(self):
+        self.counter = 0
+
+    # Los nodos compuestos deben propagar la visita
+    def visit_Modulo(self, node):
+        node.leftNode.accept(self)
+        node.rightNode.accept(self)
+        self.counter = self.counter + 1
+
+    def total(self):
+        return self.counter
+
+# Visitador que cuenta la cantidad de nodos de tipo UnaryOperatorNode que existen en el arbol
+class UnaryOperatorCounter(Visitor):
+    def __init__(self):
+        self.counter = 0
+
+    # Los nodos compuestos deben propagar la visita
+    def visit_PlusPlus(self, node):
+        node.node.accept(self)
+        self.counter = self.counter + 1
+
+    def visit_MinusMinus(self, node):
+        node.node.accept(self)
+        self.counter = self.counter + 1
+
+    def total(self):
+        return self.counter
