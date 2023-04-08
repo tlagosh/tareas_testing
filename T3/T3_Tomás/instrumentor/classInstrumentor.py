@@ -76,7 +76,9 @@ class ClassProfiler(Profiler):
     # (t[1]) y cada tupla tiene el formato: (<method-name>,<codeline-methodDef>,<method-class>)
 
     def report_executed_methods(self):
+        
         print("-- Executed methods --")
+
         executed_methods = []
         for fun in self.executed_methods:
             print("Function " + fun)
