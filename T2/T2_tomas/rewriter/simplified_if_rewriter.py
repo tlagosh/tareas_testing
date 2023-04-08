@@ -1,6 +1,5 @@
 from .rewriter import *
 import ast
-import astor
 
 # Clases que permiten transformar codigo que contiene expresiones de la forma:
 # def example(x, y):
