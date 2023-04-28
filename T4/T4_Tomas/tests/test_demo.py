@@ -37,8 +37,8 @@ class TestClockDisplay(TestCase):
     
 class TestNumberDisplay(TestCase):
     def test_str(self):
-        number = NumberDisplay(0, 60)
-        self.assertEqual(number.str(), "00")
+        number = NumberDisplay(10, 60)
+        self.assertEqual(number.str(), "10")
 
     def test_invariant(self):
         number = NumberDisplay(0, 60)
